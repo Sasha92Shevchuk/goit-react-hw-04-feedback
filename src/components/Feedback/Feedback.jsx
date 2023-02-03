@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Statistics from '../Statistics';
 import FeedbackOptions from '../FeedbackOptions';
 import Section from 'components/Section';
@@ -7,7 +6,6 @@ import Notification from 'components/Notification';
 import { Wrapper } from './Feedback.styled';
 
 class Feedback extends Component {
-  
   state = {
     good: 0,
     neutral: 0,
