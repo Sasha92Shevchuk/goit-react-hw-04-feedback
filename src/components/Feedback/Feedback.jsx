@@ -22,7 +22,7 @@ class Feedback extends Component {
     return good + neutral + bad;
   };
   countPositiveFeedbackPercentage(good, total) {
-    return ((100 * good) / total).toFixed(0);
+    return Number(((100 * good) / total).toFixed(0));
   }
 
   render() {
@@ -33,7 +33,8 @@ class Feedback extends Component {
       <Wrapper>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={['good', 'neutral', 'bad']}
+            // options={['good', 'neutral', 'bad']} - або так або через Object.keys
+            options={Object.keys(this.state)}
             onLeaveFeedback={this.handleIncrement}
           />
         </Section>

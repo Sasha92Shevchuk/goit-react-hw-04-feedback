@@ -10,7 +10,6 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
     <li>Positive feedback: {positivePercentage}%</li>
   </StatisticsList>
 );
-
 export default Statistics;
 
 Statistics.propTypes = {
